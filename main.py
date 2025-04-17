@@ -1,3 +1,5 @@
+# Script to run inferences on Raspberry Pi while sending results to a redis server for remote viewing
+
 import cv2
 import tensorflow as tf
 from picamera2 import Picamera2
@@ -5,6 +7,7 @@ import numpy as np
 import multiprocessing as mp
 import time
 import ImageTransferService
+# Code for sending images through redis obtained from: https://stackoverflow.com/questions/57876639/cvimshow-over-ssh-x11-too-slow-alternatives
 
 model_path = 'model_3d.h5'
 inference_time_csv = 'inference_time.csv'
