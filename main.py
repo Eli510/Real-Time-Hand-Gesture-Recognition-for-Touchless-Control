@@ -99,7 +99,7 @@ def capture_video(video, labels, label):
         if len(video) >= num_frames:
             video.pop(0)
         # Preprocess the frame and add it to the video list
-        video.append(preprocess_frame(frame, new_size=(64, 96)))
+        video.append(preprocess_frame(frame, new_size=(112, 112)))
 
         # Add label to frame
         label_index = label.value
